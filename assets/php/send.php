@@ -7,11 +7,11 @@
         $mail->Port=587;
         $mail->SMTPAuth=true;
         $mail->SMTPSecure='tls';
-        $mail->Username='remle0409@gmail.com';
-        $mail->Password='mhelmina25';
+        $mail->Username='myemail@email.com';
+        $mail->Password='password';
 
         $mail->setFrom($_POST['email'],$_POST['name']);
-        $mail->addAddress('melre2596@gmail.com');
+        $mail->addAddress('other@email.com');
         
         $mail->isHTML(true);
         $mail->Subject="Subject: " .$_POST['subject'];
