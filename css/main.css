@@ -1,0 +1,67 @@
+@import url("nav.css");
+@import url("header.css");
+@import url("portfolio.css");
+@import url("portfolio-modal.css");
+@import url("about.css");
+@import url("contact.css");
+@import url("footer.css");
+@import url("back-to-top-btn.css");
+:root {
+  --blue: #338496;
+  --green: #118E54;
+  --grayish: rgb(36, 36, 36);
+  --blue2: #48a9be;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  overflow: visible;
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  background: transparent;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+a:visited {
+  background: transparent;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.heading-container {
+  width: 100%;
+  padding: 30px 100px;
+  text-align: center;
+  background-color: var(--blue);
+  margin: 0;
+}
+
+.heading-container .heading {
+  text-transform: uppercase;
+  margin: auto;
+  width: 12ch;
+  font-size: 2rem;
+  color: #ffffff;
+  cursor: default;
+  border-right: 15px solid #ffffff;
+  border-left: 15px solid #ffffff;
+  border-radius: 10px;
+  padding: 4px 10px;
+}
+/*# sourceMappingURL=main.css.map */

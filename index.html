@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remel Mina - Web Developer : Graphic Artist : NET Developer</title>
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="back-to-top-btn">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+    <nav class="navbar-container">
+        <a href=""><img src="assets/img/logo.png" alt="Remle Logo" class="logo"></a>
+        <div class="nav-list-container hidden">
+            <ul class="nav">
+                <li class="nav-li active"><a class="nav-link">Home</a></li>
+                <li class="nav-li"><a class="nav-link">Portfolio</a></li>
+                <li class="nav-li"><a class="nav-link">About</a></li>
+                <li class="nav-li"><a class="nav-link">Contact</a></li>
+                <li id="line"></li>
+            </ul>
+        </div>
+        <div class="hamburger-container">
+            <div class="bar-1"></div>
+            <div class="bar-2"></div>
+            <div class="bar-3"></div>
+        </div>
+    </nav>
+    <header class="header-section">
+        <div class="hero-img-container">
+            <img src="assets/img/hero-img.png" alt="" class="hero-img">
+        </div>
+        <div class="hero-text-container">
+            <h5 class="hero-text-sup">Hi, I'm</h5>
+            <h2 class="hero-text-main">Remel Mina</h2>
+            <hr class="divider">
+            <div class="text-sub-container">
+                <p class="hero-text-sub"><span class="text"></span><span class="blink hide">&nbsp;</span></p>
+            </div>
+            <div class="btn-grp">
+                <a class="btn" id="message-btn">Message me</a>
+                <a class="btn" id="download-btn" download>Download CV</a>
+            </div>
+        </div>
+    </header>
+    <section class="portfolio-section">
+        <div class="heading-container">
+            <h2 class="heading">Portfolio</h2>
+        </div>
+        <div class="filter-btn-container">
+            <ul class="filter">
+                <li class="filter-li active"><a class="filter-link">All</a></li>
+                <li class="filter-li"><a class="filter-link">Web Development</a></li>
+                <li class="filter-li"><a class="filter-link">Graphics</a></li>
+                <li class="filter-li"><a class="filter-link">NET Development</a></li>
+            </ul>
+        </div>
+        <div class="portfolio-cards-container">
+            <div class="card-img-container graphic">
+                <img src="assets/img/portfolio/Photo Grayscale with text overlay.jpg" alt="This photo was taken on April 2017 at Hot Spring, Baggao, Cagayan. Photoshoped by me on May 2017, and was uploaded as my facebook display picture." class="card-img">
+            </div>
+            <div class="card-img-container graphic">
+                <img src="assets/img/portfolio/Photo manipulation with light overlays.jpg" alt="Photo was taken during a trip on March 2018, and was edited on the same day as part of my hobby." class="card-img">
+            </div>
+            <div class="card-img-container graphic">
+                <img src="assets/img/portfolio/Sample Magazine 1.jpg" alt="Magazine layout as a requirement in our subject, Free Elective I (Technical Writing) - May 2019" class="card-img">
+            </div>
+            <div class="card-img-container graphic">
+                <img src="assets/img/portfolio/invitation card.jpg" alt="Birthday and christening invitation card for my friend's son - October 2019" class="card-img">
+            </div>
+            <div class="card-img-container graphic">
+                <img src="assets/img/portfolio/Sample Magazine 2.jpg" alt="Magazine layout as a requirement in our subject, Free Elective I (Technical Writing) - May 2019" class="card-img">
+            </div>
+            <div class="card-img-container graphic">
+                <img src="assets/img/portfolio/Sample Magazine 3.jpg" alt="Magazine layout as a requirement in our subject, Free Elective I (Technical Writing) - May 2019" class="card-img">
+            </div>
+            <div class="card-img-container net">
+                <img src="assets/img/portfolio/Records Management System.jpg" alt="Proposed system for SAD as a final requirement for the subject - 2019" class="card-img">
+            </div>
+            <div class="card-img-container net">
+                <img src="assets/img/portfolio/PvZ Activity Game.jpg" alt="To make a fun and exciting activity for my Principles of Teaching presentation, I developed this simple game based on Plants vs Zombies to pair with my topic about Human Nervous System." class="card-img">
+            </div>
+            <div class="card-img-container net">
+                <img src="assets/img/portfolio/Property Management System.jpg" alt="As part of helping my friends through our Capstone, I developed this system with them with the features required by their chosen agency - 2019" class="card-img">
+            </div>
+            <div class="card-img-container net">
+                <img src="assets/img/portfolio/Information System.jpg" alt="Simple Information System as final requirement for IT Elective I - January 2019" class="card-img">
+            </div>
+            <div class="card-img-container graphic">
+                <img src="assets/img/portfolio/wedding digital photo album sample.jpg" alt="Sample page I layouted as a Graphic Artist - 2019" class="card-img">
+            </div>
+            <div class="card-img-container web">
+                <img src="assets/img/portfolio/ecook web.png" alt="Final requirement for Web Development which runs only locally - 2017" class="card-img">
+            </div>
+            <div class="card-img-container graphic">
+                <img src="assets/img/portfolio/Mobile login-signup mockup.jpg" alt="Mockup for our Capstone Project (Design and Developement of Raspberry PI IoT Aeroponics with Android Mobile App for Indoor Crop Production.) - 2019" class="card-img">
+            </div>
+            <div class="card-img-container graphic">
+                <img src="assets/img/portfolio/debut digital photo album sample.jpg" alt="Another sample page I layouted as a Graphic Artist - 2019" class="card-img">
+            </div>
+        </div>
+        <div class="portfolio-modal-container">
+            <div class="card-img-container">
+                <p class="img-title"></p>
+                <img src="" alt="" id="modalImg">
+                <p class="img-description"></p>
+            </div>
+            <div class="controls-container">
+                <span class="fas fa-times" id="closeModal"></span>
+                <span class="fas fa-angle-left" id="prevImg"></span>
+                <span class="fas fa-angle-right" id="nextImg"></span>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="about-section">
+    <div class="heading-container">
+        <h2 class="heading">About</h2>
+    </div>
+    <div class="about-details-container">
+        <div class="details-container">
+            <h3>about me</h3>
+            <p class="sup-text">I'm a Web Developer, Graphic Artist and NET Developer from Baggao, Cagayan Valley, Philippines</p>
+            <p class="main-text">As a developer, I'm considered to be JUNIOR but, can collaborate well with my Seniors. I really love to dive into developing and designing. Although I'm not considering my skills into expert not also into beginner, <span>"kumbaga sa tagalog sakto lang"</span>.</p><p class="main-text">If you want to know more about me, just download my CV.</p>
+        </div>
+        <div class="about-img-container">
+            <img src="assets/img/about/about-img.png" alt="" class="about-img">
+            <div class="download-btn-container">
+                <div class="btn"><a  id="btnDownload" download>Download CV</a></div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="contact-section">
+    <div class="heading-container">
+        <h2 class="heading">Contact</h2>
+    </div>
+    <div class="containers">
+        <div class="contact-details-container">
+            <div class="address-container contact">
+                <span class="fas fa-map-marker-alt"></span>
+                <h3 class="heading">Address</h3>
+                <p>Zone 7 Annayatan Baggao 3506 Cagayan Philippines</p>
+            </div>
+            <div class="email-container contact">
+                <span class="fas fa-envelope"></span>
+                <h3 class="heading">Email</h3>
+                <p>melre2596@gmail.com</p>
+            </div>
+            <div class="mobile-container contact">
+                <span class="fas fa-phone-volume"></span>
+                <h3 class="heading">Message or Call</h3>
+                <p>+63 955 0944 999</p>
+            </div>
+        </div>
+        <form id="frm">
+            <div class="form-control-container">
+                <input type="text" name="name" class="form-control" placeholder="Name" required>
+            </div>
+            <div class="form-control-container">
+                <input type="email" name="email" class="form-control" placeholder="Email" required>
+            </div>
+            <div class="form-control-container">
+                <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+            </div>
+            <div class="form-control-container">
+                <textarea name="message" id="" rows="5" placeholder="Message" class="form-control"></textarea>
+            </div>
+            <div class="form-control-container">
+                <div class="status" style="width: 100%; margin: -15px 0 5px 0; text-align: center;opacity: 0%; transition: opacity .3s;">
+                    <span class="fas fa-spinner fa-spin" id="spin"></span><span class="status-msg"> Sending message</span>
+                </div>
+                <input id="btnsubmit" class="btn" type="submit" value="Send message">
+            </div>
+        </form>
+    </div>
+</section>
+<footer class="footer">
+    <div class="container">
+        <div class="social-links-container">
+            <span class="fab fa-facebook"></span>
+            <span class="fab fa-facebook-messenger"></span>
+            <span class="fab fa-twitter-square"></span>
+            <span class="fab fa-github-square"></span>
+        </div>
+        <div class="copyright-container">
+            <p>&copy; Remel Mina, 2020</p>
+        </div>
+    </div>
+</footer>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/header.js"></script>
+<script src="js/portfolio.js"></script>
+<script src="js/portfolio-modal.js"></script>
+<script src="js/footer.js"></script>
+<script src="js/contact-me.js"></script>
+</body>
+</html>

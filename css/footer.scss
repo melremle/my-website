@@ -1,0 +1,39 @@
+.footer{
+    height: auto;
+    width: 100vw;
+    background-color: var(--blue);
+    margin: 0;
+
+    .container{
+        padding: 15px 10px;
+        width: 100%;
+        .social-links-container{
+            padding-top: 20px;
+            margin: auto;
+            margin-bottom: 15px;
+
+            text-align: center;
+            vertical-align: middle;
+            font-size: 1.5rem;
+            color: #ffffff;
+
+            span{
+                transition: all .3s;
+                padding: 0 5px;
+                cursor: pointer;
+            }
+            span:hover{
+                font-size: 1.6rem;
+            }
+        }
+        .copyright-container{
+            margin: auto;
+            width: 50%;
+            border-top: 2px solid #ffffff;
+            text-align: center;
+            color: #ffffff;
+            font-size: 1rem;
+            font-weight: 300;
+        }
+    }
+}

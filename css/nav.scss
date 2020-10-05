@@ -1,0 +1,481 @@
+// ------------------the fault para sa XL screens -------------------
+.navbar-container{
+    transition: all .4s;
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+    height: 100px;
+    padding-top: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 20px;
+    z-index: 99999;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px;
+    place-content: center;
+    a{
+        place-self: center start;
+    }
+    img.logo{
+        transition: all .4s;
+        place-self:center start;
+        padding: 0;
+        grid-column: 1/2;
+        padding-left: 10px;
+        max-height: 70px;
+    }
+    
+    div.nav-list-container{
+        grid-column: 2/3;
+        transition: all .4s;
+        
+        place-self: center;
+        
+        ul.nav{
+            float: right;
+            margin: 0;
+            
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            gap: 50px;
+            
+            li.nav-li{
+                padding: 0;
+                list-style-type: none;
+                overflow: hidden;
+                a.nav-link{
+                    cursor: pointer;
+                    color: var(--blue);
+                    font-size: 1.5rem;
+                    
+                }
+            }
+            li#line{
+                border-radius: 10px;
+                transition: all .4s;
+                position: absolute;
+                list-style-type: none;
+                width: 0px;
+                height: 2px;
+                bottom: 30px;
+                left: 0;
+                background-color: var(--blue);
+
+            }
+        }
+    }
+    div.hamburger-container{
+        display: none;
+    }
+}
+.navbar-container.scrolled{
+    background-color: var(--blue);
+    // box-shadow: 0 0 10px rgba(0,0,0,0.7);
+    height: 70px;
+    div.nav-list-container{
+        ul.nav{
+            li.nav-li{
+                a.nav-link{
+                    color: #ffffff;
+                }
+            }
+            li#line{
+                background-color: #ffffff;
+            }
+        }
+    }
+}
+
+
+
+// -----------------------Media Queries ------------------------------------
+
+
+// LG MQ
+@media (max-width:992px)and (min-width:769px){
+    .navbar-container{
+        div.nav-list-container{
+            ul.nav{
+                
+                li.nav-li{
+                    padding: 0;
+                    a.nav-link{
+                        font-size: 1.3rem;
+                        padding-left: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// MD MQ
+@media (max-width:768px)and (min-width:601px){
+    .navbar-container{
+        div.nav-list-container.hidden{
+            opacity: 0%;
+            display: none;
+        }
+        div.nav-list-container{
+            opacity: 95%;
+            display: block;
+            overflow: hidden;
+            position: fixed;
+            top: 100px;
+            left: 0;
+            width: 100%;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+            
+            ul.nav{
+                transform: translateY(-140%);
+                transition: all .4s;
+                padding: 0;
+                margin: 0;
+                background-color: #ffffff;
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(4,1fr);
+                gap: 0;
+                
+                li.nav-li{
+                    transition:all .4s;
+                    cursor: pointer;
+                    padding: 15px;
+                    
+                    display: grid;
+                    place-items: center;
+                }
+                
+                li.nav-li.active{
+                    padding: 15px;
+                    background-color: #44adc5;
+                    
+                    a.nav-link{
+                        color: var(--grayish);
+                        
+                    }
+                }
+                li#line{
+                    display: none;
+                }
+            }
+            ul.nav.ham-clicked{
+                transform: translateY(0);
+            }
+        }
+        
+        div.hamburger-container{
+            grid-column: 2/3;
+            grid-row: 1/2;
+            margin: 0;
+            padding: 0 10px 0 0;
+            cursor: pointer;
+            
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3,5px);
+            place-items: center end;
+            place-self: center end;
+            gap: 8px;
+            
+            [class*="bar-"]{
+                border-radius: 10px;
+                transition: all .4s cubic-bezier(0.075, 0.82, 0.165, 1);
+                width: 40px;
+                height: 6px;
+                background-color:var(--blue);
+            }
+            .bar-2{
+                transform: scale(1,1) rotate(-180deg);
+                
+            }
+        }
+        
+        div.active{
+            .bar-1 {
+                width: 30px;
+                transform: rotate(-45deg) translate(-9px, 9px);
+            }
+            
+            .bar-2 {
+                opacity: 0;
+                transform: scale(0,0) rotate(180deg);
+                transform-origin: right;
+            }
+            
+            .bar-3 {
+                width: 30px;
+                transform: rotate(45deg) translate(-9px, -9px);
+            }
+        }
+    }
+    .navbar-container.scrolled{
+        background-color: var(--blue);
+        box-shadow: 0 0 10px rgba(0,0,0,0.7);
+        height: 70px;
+        
+        div.nav-list-container{
+            ul.nav{
+                background-color: var(--blue);
+
+            }
+        }
+        div.hamburger-container{
+            [class*='bar-']{
+                background-color: #ffffff;
+            }
+        }
+    }
+}
+
+// SM MQ
+@media (max-width:600px)and (min-width:523px){
+    .navbar-container{
+        padding: 20px;
+        
+        div.nav-list-container.hidden{
+            opacity: 0%;
+            display: none;
+        }
+        div.nav-list-container{
+            opacity: 95%;
+            display: block;
+            overflow: hidden;
+            position: fixed;
+            top: 100px;
+            left: 0;
+            width: 100%;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            
+            ul.nav{
+                transform: translateY(-140%);
+                transition: all .4s;
+                padding: 0;
+                margin: 0;
+                background-color: #ffffff;
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(4,1fr);
+                gap: 0;
+                
+                li.nav-li{
+                    transition:all .4s;
+                    cursor: pointer;
+                    padding: 15px;
+                    
+                    display: grid;
+                    place-items: center;
+                }
+                
+                li.nav-li.active{
+                    background-color: #44adc5;
+                    
+                    a.nav-link{
+                        color: var(--grayish);
+                        
+                    }
+                }
+                li#line{
+                    display: none;
+                }
+            }
+            ul.nav.ham-clicked{
+                transform: translateY(0);
+            }
+        }
+        
+        div.hamburger-container{
+            grid-column: 2/3;
+            grid-row: 1/2;
+            margin: 0;
+            padding: 0 10px 0 0;
+            cursor: pointer;
+            
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3,5px);
+            place-items: center end;
+            place-self: center end;
+            gap: 8px;
+            
+            [class*="bar-"]{
+                border-radius: 10px;
+                transition: all .4s cubic-bezier(0.075, 0.82, 0.165, 1);
+                width: 50px;
+                height: 5px;
+                background-color: var(--blue);
+            }
+            .bar-2{
+                transform: scale(1,1) rotate(-180deg);
+                
+            }
+        }
+        
+        div.active{
+            .bar-1 {
+                width: 30px;
+                transform: rotate(-45deg) translate(-9px, 9px);
+            }
+            
+            .bar-2 {
+                opacity: 0;
+                transform: scale(0,0) rotate(180deg);
+                transform-origin: right;
+            }
+            
+            .bar-3 {
+                width: 30px;
+                transform: rotate(45deg) translate(-9px, -9px);
+            }
+        }
+    }
+    .navbar-container.scrolled{
+        background-color: var(--blue);
+        box-shadow: 0 0 10px rgba(0,0,0,0.7);
+        height: 70px;
+        
+        div.nav-list-container{
+            ul.nav{
+                background-color: var(--blue);
+
+            }
+        }
+        div.hamburger-container{
+            [class*='bar-']{
+                background-color: #ffffff;
+            }
+        }
+    }
+}
+
+// XSM MQ
+@media (max-width:522px){
+    .navbar-container{
+        padding: 10px;
+
+        div.nav-list-container.hidden{
+            opacity: 0%;
+            display: none;
+        }
+        div.nav-list-container{
+            opacity: 95%;
+            display: block;
+            overflow: hidden;
+            position: fixed;
+            top: 100px;
+            left: 0;
+            width: 100%;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            
+            ul.nav{
+                transform: translateY(-140%);
+                transition: all .4s;
+                padding: 0;
+                margin: 0;
+                background-color: #ffffff;
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(4,1fr);
+                gap: 0;
+                
+                li.nav-li{
+                    transition:all .4s;
+                    cursor: pointer;
+                    padding: 15px;
+                    
+                    display: grid;
+                    place-items: center;
+                }
+                
+                li.nav-li.active{
+                    background-color: #44adc5;
+                    
+                    a.nav-link{
+                        color: var(--grayish);
+                        
+                    }
+                }
+
+                li#line{
+                    display: none;
+                }
+            }
+            ul.nav.ham-clicked{
+                transform: translateY(0);
+            }
+        }
+        
+        div.hamburger-container{
+            grid-column: 2/3;
+            grid-row: 1/2;
+            margin: 0;
+            padding: 0 10px 0 0;
+            cursor: pointer;
+            
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3,5px);
+            place-items: center end;
+            place-self: center end;
+            gap: 8px;
+            
+            [class*="bar-"]{
+                border-radius: 10px;
+                transition: all .4s cubic-bezier(0.075, 0.82, 0.165, 1);
+                width: 50px;
+                height: 5px;
+                background-color: var(--blue);
+            }
+            .bar-2{
+                transform: scale(1,1) rotate(-180deg);
+                
+            }
+        }
+        
+        div.active{
+            .bar-1 {
+                width: 30px;
+                transform: rotate(-45deg) translate(-9px, 9px);
+            }
+            
+            .bar-2 {
+                opacity: 0;
+                transform: scale(0,0) rotate(180deg);
+                transform-origin: right;
+            }
+            
+            .bar-3 {
+                width: 30px;
+                transform: rotate(45deg) translate(-9px, -9px);
+            }
+        }
+    }
+    .navbar-container.scrolled{
+        background-color: var(--blue);
+        box-shadow: 0 0 10px rgba(0,0,0,0.7);
+        height: 70px;
+        
+        div.nav-list-container{
+            ul.nav{
+                background-color: var(--blue);
+
+            }
+        }
+        div.hamburger-container{
+            [class*='bar-']{
+                background-color: #ffffff;
+            }
+        }
+    }
+}

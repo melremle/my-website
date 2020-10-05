@@ -1,0 +1,416 @@
+section.contact-section{
+    .fa-check{
+        color: rgb(12, 141, 12);
+    }
+    .fa-times{
+        color: crimson;
+    }
+    height: auto;
+    background-color: #ffffff;
+
+    .containers{
+        padding: 10px 100px;
+
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        place-items: center;
+        .contact-details-container{
+            width: 100%;    
+            display: grid;
+            grid-template-rows: repeat(3,1fr);
+            place-items: end;
+            padding-right: 100px;
+
+            span{
+                color: var(--blue);
+                font-size: 1.6rem;
+                margin: 0;
+                padding: 0;
+            }
+            h3.heading{
+                color: #505050;
+                margin: 0;
+                padding: 10px;
+            }
+            p{
+                color: #505050;
+                margin: 0;
+            }
+
+            .contact{
+                display: grid;
+                place-items: center;
+
+                height: auto;
+                text-align: center;
+                width: 350px;
+                box-shadow: 1px 3px 20px rgba(0,0,0,0.2);
+                padding: 20px;
+                line-height: 20px;
+                margin: 10px 0;
+
+            }
+        }
+        form{
+            margin: 0;
+            width: 500px;
+            box-shadow: 1px 3px 20px rgba(0,0,0,0.2);
+            padding: 20px;
+            place-self: center start;
+
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(4,auto);
+            gap: 0;
+
+            .form-control-container{
+                padding: 10px;
+                width: 100%;
+                margin: 0;
+
+                .form-control{
+                    color: #505050;
+                    outline: none;
+                    border: 1px solid #50505048;
+                    font-size: 1rem;
+                    padding: 10px;
+                    width: 100%;
+                    transition: all .2s;
+                }
+                .form-control:focus{
+                    border: 1px solid var(--blue);
+                }
+            }
+            .form-control-container:nth-child(1){
+                grid-row: 1/2;
+                grid-column: 1/2;
+            }
+            .form-control-container:nth-child(2){
+                grid-row: 1/2;
+                grid-column: 2/3;
+            }
+            .form-control-container:nth-child(3){
+                grid-row: 2/3;
+                grid-column: 1/3;
+            }
+            .form-control-container:nth-child(4){
+                grid-row: 3/4;
+                grid-column: 1/3;
+
+                .form-control{
+                    resize: vertical;
+                }
+            }
+            .form-control-container:nth-child(5){
+                grid-row: 4/5;
+                grid-column: 1/3;
+
+                display: grid;
+                .btn{
+                    transition: all .4s;
+                    border: none;
+                    outline: none;
+                    background-color: var(--blue);
+                    font-size: 1rem;
+                    height: 45px;
+                    width: 150px;
+                    place-self: center;
+                    color: #ffffff;
+                    cursor: pointer;
+                }
+                .btn:hover{
+                    background-color: var(--blue2);
+                }
+                .btn:disabled{
+                    background-color: #505050;
+                    cursor: not-allowed;
+                }
+                .btn:disabled:hover{
+                    background-color: #505050;
+                }
+            }
+        }
+    }
+    
+}
+
+@media (max-width:1150px) and (min-width:993px){
+    section.contact-section{
+
+    
+        .containers{
+            padding: 10px 20px;
+
+            .contact-details-container{
+
+                padding-right: 20px;
+                place-items: center;
+    
+            }
+            form{
+                margin-right: 30px;
+    
+                .form-control-container{
+                    padding: 10px;
+                    width: 100%;
+                    margin: 0;
+    
+                    .form-control{
+                        color: #505050;
+                        outline: none;
+                        border: 1px solid #50505048;
+                        font-size: 1rem;
+                        padding: 10px;
+                        width: 100%;
+                        transition: all .2s;
+                    }
+                    .form-control:focus{
+                        border: 1px solid var(--blue);
+                    }
+                }
+                .form-control-container:nth-child(1){
+                    grid-row: 1/2;
+                    grid-column: 1/2;
+                }
+                .form-control-container:nth-child(2){
+                    grid-row: 1/2;
+                    grid-column: 2/3;
+                }
+                .form-control-container:nth-child(3){
+                    grid-row: 2/3;
+                    grid-column: 1/3;
+                }
+                .form-control-container:nth-child(4){
+                    grid-row: 3/4;
+                    grid-column: 1/3;
+    
+                    .form-control{
+                        resize: vertical;
+                    }
+                }
+                .form-control-container:nth-child(5){
+                    grid-row: 4/5;
+                    grid-column: 1/3;
+    
+                    display: grid;
+                    .btn{
+                        transition: all .4s;
+                        border: none;
+                        outline: none;
+                        background-color: var(--blue);
+                        font-size: 1rem;
+                        height: 45px;
+                        width: 150px;
+                        place-self: center;
+                        color: #ffffff;
+                        cursor: pointer;
+                    }
+                    .btn:hover{
+                        background-color: var(--blue2);
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+@media (max-width:992px) and (min-width:601px){
+    section.contact-section{
+
+        .containers{
+            padding: 10px 20px;
+
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2,auto);
+
+            .contact-details-container{
+                grid-column: 1/2;
+                grid-row: 1/2;
+                padding-right: 0;
+                place-items: center;
+    
+                .contact{
+                    display: grid;
+                    place-items: center;
+    
+                    height: auto;
+                    text-align: center;
+                    width: 350px;
+                    box-shadow: 1px 3px 20px rgba(0,0,0,0.2);
+                    padding: 20px;
+                    line-height: 20px;
+                    margin: 10px 0;
+    
+                }
+            }
+            form{
+                grid-column: 1/2;
+                grid-row: 2/3;
+                place-self: center;
+    
+                .form-control-container{
+                    padding: 10px;
+                    width: 100%;
+                    margin: 0;
+    
+                    .form-control{
+                        color: #505050;
+                        outline: none;
+                        border: 1px solid #50505048;
+                        font-size: 1rem;
+                        padding: 10px;
+                        width: 100%;
+                        transition: all .2s;
+                    }
+                    .form-control:focus{
+                        border: 1px solid var(--blue);
+                    }
+                }
+                .form-control-container:nth-child(1){
+                    grid-row: 1/2;
+                    grid-column: 1/2;
+                }
+                .form-control-container:nth-child(2){
+                    grid-row: 1/2;
+                    grid-column: 2/3;
+                }
+                .form-control-container:nth-child(3){
+                    grid-row: 2/3;
+                    grid-column: 1/3;
+                }
+                .form-control-container:nth-child(4){
+                    grid-row: 3/4;
+                    grid-column: 1/3;
+    
+                    .form-control{
+                        resize: vertical;
+                    }
+                }
+                .form-control-container:nth-child(5){
+                    grid-row: 4/5;
+                    grid-column: 1/3;
+    
+                    display: grid;
+                    .btn{
+                        transition: all .4s;
+                        border: none;
+                        outline: none;
+                        background-color: var(--blue);
+                        font-size: 1rem;
+                        height: 45px;
+                        width: 150px;
+                        place-self: center;
+                        color: #ffffff;
+                        cursor: pointer;
+                    }
+                    .btn:hover{
+                        background-color: var(--blue2);
+                    }
+                }
+            }
+        }
+        
+    }
+}
+@media (max-width:600px){
+    section.contact-section{
+
+        .containers{
+            padding: 10px 20px;
+
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2,auto);
+
+            .contact-details-container{
+                grid-column: 1/2;
+                grid-row: 1/2;
+                place-items: center;
+                padding-right: 0;
+
+                .contact{
+                    display: grid;
+                    place-items: center;
+    
+                    height: auto;
+                    text-align: center;
+                    width: 100%;
+                    box-shadow: 1px 3px 20px rgba(0,0,0,0.2);
+                    padding: 20px;
+                    line-height: 20px;
+                    margin: 10px 0;
+    
+                }
+            }
+            form{
+                width: 100%;
+                margin: 0;
+                margin-top: 30px;
+                grid-column: 1/2;
+                grid-row: 2/3;
+                place-self: center;
+    
+                .form-control-container{
+                    padding: 10px;
+                    width: 100%;
+                    margin: 0;
+    
+                    .form-control{
+                        color: #505050;
+                        outline: none;
+                        border: 1px solid #50505048;
+                        font-size: 1rem;
+                        padding: 10px;
+                        width: 100%;
+                        transition: all .2s;
+                    }
+                    .form-control:focus{
+                        border: 1px solid var(--blue);
+                    }
+                }
+                .form-control-container:nth-child(1){
+                    grid-row: 1/2;
+                    grid-column: 1/2;
+                }
+                .form-control-container:nth-child(2){
+                    grid-row: 1/2;
+                    grid-column: 2/3;
+                }
+                .form-control-container:nth-child(3){
+                    grid-row: 2/3;
+                    grid-column: 1/3;
+                }
+                .form-control-container:nth-child(4){
+                    grid-row: 3/4;
+                    grid-column: 1/3;
+    
+                    .form-control{
+                        resize: vertical;
+                    }
+                }
+                .form-control-container:nth-child(5){
+                    grid-row: 4/5;
+                    grid-column: 1/3;
+    
+                    display: grid;
+                    .btn{
+                        transition: all .4s;
+                        border: none;
+                        outline: none;
+                        background-color: var(--blue);
+                        font-size: 1rem;
+                        height: 45px;
+                        width: 150px;
+                        place-self: center;
+                        color: #ffffff;
+                        cursor: pointer;
+                    }
+                    .btn:hover{
+                        background-color: var(--blue2);
+                    }
+                }
+            }
+        }
+        
+    }
+}
